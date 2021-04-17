@@ -21,3 +21,6 @@ function list_images(){
     $DOCKER_BIN images 
     echo " All images are listed"
 }
+
+build_images
+list_images
