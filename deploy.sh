@@ -30,7 +30,7 @@ function deployweb(){
     echo "No such container"
     fi
 
-    $DOCKER_BIN run -d --name webapp --net $APP_NETWORK -p $WEBAPP_PORT:5000 webapp:2020.1
+    $DOCKER_BIN run -d --name webapp --net $APP_NETWORK -p $WEBAPP_PORT:80 webapp:2020.1
     echo "Web server successfully deployed"
 
 }
