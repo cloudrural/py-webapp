@@ -1,0 +1,1544 @@
+/*
+
+Theme Name: Fitness
+Author: designstub
+Author URI: http://www.designstub.com
+*/
+
+
+
+/*--------------
+ * Table of Contents
+--------------*/
+
+/*-----------------
+1. Reset.css
+2. Helper Classes
+3. Home page banner
+4. Pitch Section
+5. Features Section
+6. Review
+7. Pricing
+8. Subscribe form
+9. Media Queries
+------------------*/
+
+
+/*----- 1. Reset.css -----*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* --- Common Styles ---*/
+
+h1 {
+  font-size: 16px;
+}
+
+
+/*----- Helper Classes -----*/
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+*, *:after, *:before {
+  /*-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;*/
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*
+::-webkit-scrollbar {
+	display: none;
+}
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik', sans-serif;
+}
+
+p {
+	font-family: 'Rubik', sans-serif;
+}
+
+::-moz-selection {
+    color: #000FFF;
+    background: #fff;
+}
+
+::selection {
+    color: #000FFF;
+    background: #fff;
+}
+
+.nopadding {
+	padding: 0;
+}
+
+.custompadding {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.no-margin {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.underline {
+	display: inline;
+	border-bottom: 3px solid #111;
+	padding-bottom: 0;
+}
+
+.after-line {
+	height: 3px;
+	width: 100px;
+	background: #fff;
+	margin-top: -10px;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.sup-title {
+	display: inline-block;
+	font-size: 1em;
+	padding: 4px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000FFF;
+	background: #000000;
+	margin: 0 0 20px 0;
+}
+
+#loading {
+   width: 100%;
+   height: 100%;
+   top: 0px;
+   left: 0px;
+   position: fixed;
+   opacity: 1;
+   background-color: #F2F2F2;
+   z-index: 9999;
+   text-align: center;
+}
+
+#loading-image {
+	display: inline;
+    top: 40%;
+    position: relative;
+  z-index: 9999;
+}
+
+.logo {
+  margin: 0 auto;
+	padding: 0px 0px;
+	z-index: 111;
+}
+
+.logo:hover, .logo:focus {
+	text-decoration: none;
+	color: #000;
+}
+
+
+
+/* ------ Navbar Styling Starts ----- */
+
+
+.navbar {
+	font-size: 14px;
+  font-style: arial;
+	font-weight: 400;
+	text-transform: capitalize;
+	padding-top: 25px;
+	letter-spacing: 1px;
+	height: 80px;
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	transition: all 0.6s;
+	-webkit-backface-visibility: hidden;
+}
+
+.navbar-default {
+  transition: all 0.6s ease;
+	border-color: transparent;
+  background-color: initial;
+}
+
+.navbar-default .navbar-toggle {
+  border-radius: 0px;
+  border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:focus {
+  background-color: initial;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-brand .navbar-toggle .collapsed {
+    padding: 4px 6px;
+    font-size: 14px;
+    color: #2AAFC0 ;
+  }
+
+.navbar-default .navbar-brand {
+	padding-top: 5px;
+	color: #2AAFC0;
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	-o-transition: 200ms;
+	transition: 200ms;
+}
+
+.navbar-default .navbar-brand:hover {
+  transition: 1s;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5;
+  transition: all 0.5s;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #111111;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background: transparent;
+  color: #111111;
+  }
+
+
+.navbar-default .navbar-nav > .active > a:hover {
+    background: transparent;
+    color: #111111;
+}
+
+.navbar-default .navbar-nav > .active > a:focus {
+	background: transparent;
+  color: #2AAFC0;
+}
+
+.navbar-default .navbar-collapse {
+	border-color: transparent;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav .open .dropdown-toggle {
+  color: #2AAFC0;
+}
+
+.navbar-default .nav-white > li > a {
+	color: #000FFF;
+}
+
+.navbar-default .nav-white > li > a:hover {
+	color: #999999;
+}
+.navbar-default .navbar-brand.nav-white {
+	padding-top: 15px;
+	color: #000FFF;
+	font-size: 21px;
+	letter-spacing: 1px;
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	-o-transition: 200ms;
+	transition: 200ms;
+}
+
+/*---------- Media Queries ---------*/
+
+@media only screen and (max-width: 767px) {
+
+	.navbar {
+		padding-top: 5px;
+		height: 60px;
+	}
+
+  .navbar-default {
+    border: 0px;
+    background-color: transparent;
+  }
+
+	.navbar-default .navbar-collapse {
+		text-align: center;
+		border-color: transparent;
+	  background-color: #000FFF;
+	}
+
+  .navbar-default .navbar-collapse {
+    border: 0;
+    border-color: transparent;
+  }
+
+  .navbar-default .navbar-nav > li> a {
+    color: #222222;
+		margin-top: 10px;
+  }
+
+	.navbar-default .navbar-nav > li> a:hover {
+		color: #222222;
+	}
+
+  .navbar-default .navbar-brand {
+    color: #000FFF;
+		padding: 16px 15px !important;
+  }
+
+	.navbar-default .navbar-brand.nav-white {
+		color: #000FFF;
+	}
+
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #111111;
+  }
+}
+
+@media only screen and (min-width: 240px) {
+
+
+.navbar.past-main {
+	font-size: 14px;
+	padding-top: 5px;
+	height: 60px;
+	background-color: rgba(0, 174, 218, 1);
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	transition: all 0.6s;
+}
+
+.navbar-default.past-main .navbar-brand {
+	color: #111111;
+}
+
+.navbar-default.past-main .navbar-toggle .icon-bar {
+	background-color: #111111;
+}
+
+.navbar-default.past-main .navbar-nav > li > a {
+  color: #fff;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.navbar-default.past-main .navbar-nav > li > a:hover {
+  color: #111111;
+}
+
+.navbar-default.past-main .navbar-nav > .active > a {
+  background: transparent;
+  color: #5924EC;
+  }
+
+
+.navbar-default.past-main .navbar-nav > .active > a:hover {
+    background: transparent;
+    color: #222222;
+}
+
+.navbar-default.past-main .navbar-nav > .active > a:focus {
+	background: transparent;
+  color: #222222;
+}
+
+}
+
+.navbar-default .nav-white .navbar-toggle .icon-bar {
+	background-color: #000FFF;
+}
+
+.navbar-default.past-main .nav-white .navbar-toggle .icon-bar {
+	background-color: #111111;
+}
+
+/* ------------------------------------------------------
+-------------- Main Section Styling Starts --------------
+--------------------------------------------------------*/
+
+
+#main {
+  height: 100%;
+}
+
+
+/* ----- Hero Section Styling Starts ----- */
+
+.hero-section {
+	height: 100%;
+	background: #FFFFFF;
+	padding: 150px 0 0 0;
+}
+
+.hero-content {
+	padding: 100px 0 100px 0;
+	overflow: hidden;
+}
+
+.hero-content h1 {
+	font-size: 16px;
+	font-weight: 600;
+	color: #262626;
+	line-height: 1.2;
+	letter-spacing: -1px;
+	margin: 0 0 20px 0;
+}
+
+.hero-content p {
+    font-style: arial;
+	font-size: 50px;
+	color: #A1A1A1;
+	font-weight: 400;
+	line-height: 1.5;
+	margin: 80px 0 80px 0;
+}
+
+
+.btn-action {
+ font-family: 'Rubik', sans-serif;
+ background-color: #fff;
+ border: 1px solid #fff;
+ border-radius: 0;
+ color: #000FFF;
+ font-size: 15px;
+ font-weight: 700;
+ letter-spacing: 1px;
+ line-height: 1;
+ padding: 20px 42px;
+ text-transform: uppercase;
+ outline: none;
+ -webkit-transition: 200ms;
+ -moz-transition: 200ms;
+ -o-transition: 200ms;
+ transition: 200ms;
+}
+
+.btn-action:hover, .btn-action:focus,
+.btn-action:active, .btn-action:active:focus {
+ background: transparent;
+ outline: none;
+ color: #fff;
+ background: transparent;
+ border-color: #fff;
+}
+
+
+.product .btn-action {
+ background-color: transparent;
+ border: 1px solid #82714a;
+ color: #82714a;
+}
+
+.product .btn-action:hover, .product  .btn-action:focus {
+ background: #92714A;
+ color: #000FFF;
+ border-color: #82714A;
+}
+
+
+/*---------------- Form Home Styling ------------------- */
+
+.form .hero-section {
+	background:url(../images/main-image.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+    padding: 150px 0 0 0;
+} 
+
+.form .hero-content {
+	padding: 50px 0 50px 0;
+	overflow: hidden;
+}
+
+.form img {
+	margin: 0 auto;
+}
+
+
+.form .hero-content h1 {
+	font-size: 34px;
+	font-weight: 600;
+	color: #fff;
+	line-height: 1.2;
+	letter-spacing: -1px;
+	margin: 0 0 20px 0;
+}
+
+.form .hero-content p {
+	font-family: arial;
+	font-size: 25px;
+	color: #fff;
+	line-height: 3.0;
+	/*font-weight: 400;
+	
+	margin: 0 0 25px 0;*/
+}
+
+.form .sub-form {
+	padding: 30px 0 0 0;
+	text-align: left;
+}
+
+
+.form .subscribe-form .submit-button {
+  font-size: 0.9em;
+  height: 40px;
+  border: 2px solid;
+  border-radius: 0 5px 5px 0;
+  margin: 0;
+  padding: 0 25px 0 25px;
+	border-color: #222758;
+  background-color: #222225;
+  color: #000FFF;
+	box-shadow: 0 0 1px transparent;
+  outline: none;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	transition: 500ms;
+}
+
+.form .subscribe-form .submit-button:hover {
+  border-color: #000000;
+    background-color: #000000;
+  -webkit-transition: 500ms;
+	-moz-transition: 500ms;
+  transition: 500ms;
+}
+
+.form .btn-action {
+	background: #fff;
+	border-color: #fff;
+	color: #000FFF;
+}
+
+.form .btn-action:hover {
+	background: transparent;
+	border-color: #fff;
+	color: #fff;
+}
+
+
+/*----------------
+/*-------------------------------------------------------
+---------------- Slider Section Styling -----------------
+--------------------------------------------------------*/
+
+.slider-pro .sp-slide {
+	background: #222222;
+}
+
+.slider-pro h2.sp-layer {
+	font-size: 44px !important;
+	color: #111111;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1.3;
+	text-align: left;
+}
+
+.slider-pro p.sp-layer {
+	font-size: 16px;
+	color: #A1A1A1;
+	line-height: 1.4;
+}
+
+.slider-pro a {
+	text-decoration: none;
+	color: #444444;
+	-webkit-transition: 0.5s !important;
+	-moz-transition: 0.5s !important;
+	transition: 0.5s !important;
+}
+
+.slider-pro .link-color {
+	text-decoration: none;
+	color: #111;
+	-webkit-transition: 0.5s !important;
+	-moz-transition: 0.5s !important;
+	transition: 0.5s !important;
+}
+
+.slider-pro a:hover {
+	color: #999999;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+	.slider-pro h2.sp-layer {
+		font-size: 34px !important;
+
+	}
+}
+
+
+/* -----------------------------------------------------
+--------------- App Home Styling starts ----------------
+--------------------------------------------------------*/
+
+
+.app .hero-section {
+	padding: 50px 0 0 0;
+}
+
+.app .hero-content {
+	padding: 100px 0 100px 0;
+}
+
+.app img {
+	margin: 0 auto;
+}
+
+
+.app-info h1 {
+  font-size: 34px;
+  font-weight: 600;
+  color: #404040;
+  margin-top: 30px !important;
+}
+
+.app-info h4 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color:  #3C4B5D;
+	line-height: 1.4;
+  margin-top: 20px;
+}
+
+.app-info i {
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.app-info span {
+ font-size: 13px;
+  margin-bottom: 10px;
+  color: #2AAFC0;
+}
+
+.app-info .ion {
+  font-size: 1em;
+  color: #ff8000;
+}
+
+.download-buttons {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.download-buttons img {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+.app .btn-action {
+	color: #000FFF;
+	background: #00aeda;
+	border-color: #00aeda;
+	 border-radius: 30px;
+}
+
+.app .btn-action:hover {
+	color: #00aeda;
+	background: #222225;
+	border-color: #222225;
+}
+
+
+
+/*-------------------------------------------------
+----------- About Section Styling Starts ----------
+--------------------------------------------------*/
+
+.about {
+	padding: 10px 0 10px 0;
+	background: #F1F1F1;
+}
+
+.about-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.about-content h2 {
+	font-family: 'Rubik', sans-serif;
+	font-size: 24px;
+	line-height: 1.2;
+	color: #111111;
+}
+
+.about-content h3 {
+	font-family: 'Rubik', sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	color: #111111;
+	margin: 50px 0 0 0;
+}
+
+
+
+
+/* ----- Client Sectiion Styling ----- */
+
+.client-section {
+	background-color: #00aeda;
+	padding: 5px 0 0 0;
+}
+
+.clients .single {
+	padding: 25px 0 25px 0;
+}
+
+.clients .single img {
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+		opacity: 0.6;
+}
+
+
+/*----------------------------------------------------
+----------- Pitch Section Styling Starts ----------
+-----------------------------------------------------*/
+
+
+.pitch {
+	padding: 100px 0 100px 0;
+	background: #fff;
+}
+
+.pitch-intro {
+	max-width: 650px;
+	margin: 0 auto;
+	padding: 0 0 100px 0;
+}
+
+.pitch-intro h1 {
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: #000;
+	margin: 70px 0 70px 0;
+}
+
+
+.pitch-intro p {
+	font-family: 'Rubik', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #A1A1A1;
+	letter-spacing: 0;
+}
+
+.pitch-icon {
+	margin: 0 0 10px 0;
+	background: #fff;
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+.pitch-icon i {
+	font-size: 34px;
+	color: #000FFF;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 13px;
+}
+.pitch-intro h2 {
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: #000;
+	margin: 70px 0 40px 0;
+}
+.pitch-intro h3 {
+	font-size: 16px;
+	line-height: 1.2;
+	color: #000;
+	margin: 30px 0 30px 0;
+}
+
+.pitch-content {
+	padding: 20px 0 50px 0;
+}
+
+.pitch-content h1 {
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: 0;
+	color: #000;
+	margin: 0 0 10px 0;
+	text-transform:uppercase;
+}
+
+.pitch-content p {
+	font-family: 'Rubik', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #A1A1A1;
+	letter-spacing: 0;
+}
+
+
+/*----------------------------------------------------
+----------- Features Icon Styling Starts -------------
+-----------------------------------------------------*/
+
+
+.app-features {
+	padding: 10px 0 10px 0;
+	background: #fff;
+}
+
+.pitch-intro1 {
+	max-width: 650px;
+	margin: 0 auto;
+	padding: 10px 0 10px 0;
+}
+
+.pitch-intro1 h1 {
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: #000;
+	margin: 50px 0 50px 0;
+}
+
+
+.pitch-intro1 p {
+	font-family: 'Rubik', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #A1A1A1;
+	letter-spacing: 0;
+}
+
+.pitch-icon1 {
+	margin: 10px 0 10px 0;
+	background: #fff;
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+.pitch-icon1 i {
+	font-size: 34px;
+	color: #000FFF;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 13px;
+}
+.pitch-intro1 h2 {
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: #000;
+	margin: 100px 0 50px 0;
+}
+.pitch-intro1 h3 {
+	font-size: 16px;
+	line-height: 1.2;
+	color: #000;
+	margin: 50px 0 50px 0;
+}
+
+.pitch-content1 {
+	padding: 20px 0 50px 0;
+}
+
+.pitch-content1 h1 {
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: 0;
+	color: #000;
+	margin: 0 0 10px 0;
+	text-transform:uppercase;
+}
+
+.pitch-content1 p {
+	font-family: 'Rubik', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #A1A1A1;
+	letter-spacing: 0;
+}
+
+
+/*  --------------------------------------------------
+------------- Pricing Section Styling ----------------
+-----------------------------------------------------*/
+
+
+.pricing {
+	padding: 50px 0 100px 0;
+}
+
+.pricing-content {
+	padding: 60px 0 0 0;
+	text-align: center;
+}
+
+.pricing h1 {
+	font-size: 28px;
+	font-weight: 600;
+	letter-spacing: -1px;
+	line-height: 1.2;
+}
+
+.pricing h4 {
+	font-size: 14px;
+	font-weight: 400;
+	color: #A1A1A1;
+	margin: 10px 0 30px 0;
+}
+
+.pricing p {
+	font-family: 'Rubik', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #444444;
+	line-height: 1.4;
+}
+
+.pricing .btn-buy {
+	padding: 40px 0 20px 0;
+}
+
+.pricing .btn-buy img {
+	display: inline;
+}
+
+.pricing .price-tag h2 {
+	font-family: 'Rubik', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	color: #A1A1A1;
+	margin: 0 0 20px 0;
+}
+
+
+
+
+/* ----- Pricing Tables Styling Starts ----- */
+
+.pricing-section {
+	width: 100%;
+	height: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: #fff;
+}
+
+.pricing-intro {
+	padding-bottom: 30px;
+}
+
+.pricing-intro h1 {
+	font-size: 37px;
+	color: #000;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+
+.pricing-intro p {
+	font-size: 15px;
+	color: #a1a1a1;
+	font-weight: 300;
+	line-height: 1.4;
+	letter-spacing: 1px;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+.pricing-details {
+  border: 1px solid rgba(42, 175, 192, 0.3);
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+}
+.pricing-details:hover {
+  background: #2AAFC0;
+  background: -webkit-gradient(linear, left top, right top, from(#2AAFC0), to(#6976c5));
+  background: linear-gradient(to right, #2AAFC0, #6976c5);
+  color: #fff;
+}
+.pricing-details:hover .team-img {
+  border-color: #2AAFC0;
+}
+.pricing-details:hover span {
+  color: #eee !important;
+}
+.pricing-details:hover p {
+  color: #ccc;
+}
+.pricing-details .team-img {
+  float: left;
+  width: 170px;
+  height: 170px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pricing-details {
+	padding: 50px 50px 40px 50px;
+}
+
+.table-left .icon, .table-right .icon {
+	font-size:60px;
+	margin: 0 auto;
+	color:#fff;
+}
+
+.table-left .pricing-details span, .table-right .pricing-details span {
+	font-size: 13px;
+  margin-bottom: 10px;
+  color: #2AAFC0;
+}
+
+.table-left .pricing-details h2, .table-right .pricing-details h2 {
+	 font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  margin: 10px 0 10px 0;
+}
+
+.table-left .pricing-details p, .table-right .pricing-details p {
+	font-family: 'Rubik', sans-serif;
+	font-size: 15px;
+  font-weight: 300;
+ 
+  line-height: 1.6;
+  margin: 0;
+}
+
+ .table-left .pricing-details ul, .table-right .pricing-details ul {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+
+.pricing-section .table-left:hover, .pricing-section .table-right:hover {
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.pricing-section .table-left, .pricing-section .table-right {
+	margin-top: 20px;
+}
+
+.pricing-section .table-center {
+	margin-top: 0;
+}
+
+/* ----- Pricing Section Styling Ends ----- */
+
+
+
+
+
+/* ------- Footer Section Styling Starts ------- */
+
+/*
+.footer {
+	font-family: 'Rubik', sans-serif;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+	overflow: hidden;
+	padding-top: 75px;
+	padding-bottom: 20px;
+}
+*/
+.contact {
+	text-align: center;
+}
+
+.contact i {
+	font-size: 42px;
+	color: #00aeda;
+	text-align: center;
+}
+
+.contact h1 {
+
+	font-size: 35px;
+	font-weight: 600;
+	color: #000;
+	margin: 50px 0 20px 0;
+	text-align: center;
+}
+
+.contact h6 {
+	color: #333;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 0 15px;
+  margin: 30px 0 50px 0;
+}
+
+.contact p {
+
+	font-size: 14px !important;
+	font-weight: 400;
+	color: #111111;
+	line-height: 1.3;
+	margin: 10px 0 20px 0 !important;
+	text-align: left;
+}
+
+.contact a {
+
+	font-size: 18px;
+	font-weight: 400;
+	color: #00aeda;
+	text-decoration: none;
+	display: inline-block;
+}
+
+
+.contact .form input, .contact .form textarea {
+  width: 30%;
+  padding: 15px;
+  background: #fff;
+  border: 0;
+  text-align: left;
+}
+.contact .form textarea {
+  height: 140px;
+  max-height: 140px;
+  max-width: 50%;
+  text-align: left;
+}
+.contact .form button {
+  font-size: 18px;
+  font-weight: 600;
+  width: 65%;
+  padding: 10px;
+  color: #fff;
+  background: #2AAFC0;
+  background: -webkit-gradient(linear, left top, right top, from(#2AAFC0), to(#6976c5));
+  background: linear-gradient(to right, #2AAFC0, #6976c5);
+  -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.contact .form button:hover {
+  background: #2AAFC0;
+}
+
+
+.footer {
+  background-color: #111;
+  width: 100%;
+  height: 100%;
+	overflow: hidden;
+ letter-spacing: 2px;
+  display: inline-block;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	margin: 100px 0 0 0;
+	position: relative;
+
+}
+.footer .social a {
+  color: #fff;
+  font-size: 13px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  background: #222;
+  margin: 15px 5px;
+}
+.footer .social a:hover {
+  background: #2AAFC0;
+}
+.footer p {
+  color: #999;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+
+/* -------------------------------------------------------
+----------- Bact-to-Top Styling Starts Here --------------
+---------------------------------------------------------*/
+
+
+.back-to-top {
+	background: rgba(0, 174, 218, 0.5);
+	margin: 0;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	z-index: 90;
+	display: none;
+	text-decoration: none;
+	color: #0E1729;
+}
+
+.back-to-top i {
+	position: relative;
+	left: 13px;
+	top: 8px;
+	font-size: 24px;
+	color: #000FFF;
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	-o-transition: 200ms;
+	transition: 200ms;
+}
+
+.back-to-top:hover {
+    background: rgba(0, 174, 218, 0.9);
+    color: #000FFF;
+}
+
+.back-to-top:hover i {
+	top: 6px;
+}
+
+.back-to-top:focus {
+    color: #000FFF;
+}
+
+
+.product .back-to-top {
+	background: rgba(146, 127, 84, 0.5);
+}
+
+.product .back-to-top:hover {
+	background: rgba(146, 127, 84, 0.9);
+}
+
+
+
+
+/*----------------------------------------------------
+------------- All ------------------------------------
+--------------------- Media --------------------------
+------------------------------- Queries --------------
+-----------------------------------------------------*/
+
+@media only screen and (min-width: 767px) {
+	.logo {
+	  position: absolute;
+	  top: 20px;
+	  left: 20px;
+	}
+
+	.hero-section {
+		padding: 150px 0 100px 0;
+	}
+
+	.form .hero-section {
+		padding: 13% 0;
+	}
+
+	.form .hero-content {
+		padding: 100px 0 100px 0;
+		overflow: hidden;
+	}
+
+	.form .hero-content h1 {
+		font-size: 54px;
+	}
+
+	.product .hero-content {
+		padding: 150px 0 100px 0;
+		text-align: left;
+	}
+
+	.hero-content h1 {
+		font-size: 48px;
+		margin: 20px 0 20px 0;
+	}
+
+	.hero-content p {
+		font-size: 14px;
+	}
+
+	.about-content h2 {
+		font-size: 38px;
+	}
+
+	.software .hero-content h1 {
+		font-size: 42px;
+	}
+
+	.image-bg .hero-content h1 {
+		font-size: 54px;
+	}
+
+
+	.signup .hero-content h1 {
+		font-size: 48px;
+	}
+
+	.features .features-list {
+		padding: 100px 0 0 0;
+		text-align: left;
+	}
+
+	.features .features-list ul li {
+		font-size: 18px;
+		display: list-item;
+		text-align: left;
+	}
+
+
+	.software .features {
+		padding: 100px 0 100px 0;
+	}
+
+	.software .features .features-list h1 {
+		font-size: 34px;
+	}
+
+	.software .features .features-list {
+		padding: 30px 0 0 0;
+	}
+
+
+	.software .features .features-list ul li {
+		display: list-item;
+		font-size: 14px;
+		text-align: left;
+	}
+
+
+	.feature-sub {
+		padding: 200px 0 200px 0;
+	}
+
+	.software .feature-sub .sub-inner h1 {
+		font-size: 42px;
+	}
+
+	.split-content {
+		padding: 70px 350px 50px 10px;
+		text-align: left;
+	}
+	
+	.second {
+	padding: 70px 10px 50px 350px;
+	}
+	.split-content h1 {
+		font-size: 37px;
+	}
+.second {
+padding: 70px 10px 50px 350px;
+}
+
+	.pricing {
+		padding: 100px 0 100px 0;
+	}
+
+	.pricing-content {
+		text-align: left;
+	}
+
+	.cta-sub .cta-inner h1 {
+		font-size: 36px;
+		font-weight: 600px;
+	}
+
+	.contact h1 {
+		font-size: 19px;
+		font-weight: 600px;
+
+	}
+
+	.contact p {
+		font-size: 13px !important;
+	}
+
+	.contact a {
+		font-family: 'Rubik', sans-serif;
+		font-size: 14px;
+	}
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+	.features .features-list {
+		padding: 80px 0 0 0;
+	}
+
+	.split-content {
+		padding: 100px 100px 50px 50px;
+		text-align: left;
+	}
+
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+
+ .subscribe-form .mail {
+   padding: 0 30px 0 20px;
+   border-radius: 5px 0 0 5px;
+ }
+
+ .subscribe-form .submit-button {
+   padding: 0 5px 0 5px;
+   border-radius: 0 5px 5px 0;
+ }
+
+}
+
+
+@media screen and (max-width: 399px) {
+
+	.cta-sub {
+		text-align: center;
+	}
+
+	.subscribe-form {
+		text-align: center;
+	}
+
+ .subscribe-form .mail {
+	 text-align: center;
+   padding: 0 0 0 0;
+   border-radius: 5px 0 0 5px;
+ }
+
+ .subscribe-form .submit-button {
+   padding: 0 5px 0 5px;
+   border-radius: 0 5px 5px 0;
+	 margin-top: 15px;
+ }
+
+ .form .sub-form .subscribe-form {
+ 	text-align: center;
+ }
+
+
+  .form .sub-form .subscribe-form .mail {
+ 	 text-align: center;
+    padding: 0 0 0 0;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .form .sub-form .subscribe-form .submit-button {
+    padding: 0 5px 0 5px;
+    border-radius: 0 5px 5px 0;
+ 	 margin-top: 15px;
+  }
+
+ .back-to-top {
+	right: 10px;
+}
+ .second
+ {
+	padding:0px; 
+ }
+
+ }
+
+ @media only screen and (min-width: 991px) and (max-width: 1201px) {
+
+	 .app-features .features-left, .app-features .features-right {
+	 	padding: 0 0 0 0;
+	 }
+
+	 .software .features .features-list {
+		 padding: 0 0 0 0;
+	 }
+
+ }
+
+
+/*---------------------------------------------------
+------- Media Queries for Split Layout Ends ---------
+---------------------------------------------------*/
+
+
