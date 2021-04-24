@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_BIN="/usr/bin/docker"
+DOCKER_BIN="docker"
 BASE_DIR=${PWD}
 version=$1
 
